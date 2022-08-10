@@ -13,7 +13,7 @@ class NotEnoughArguments extends Exception
      */
     public function render(): JsonResponse
     {
-        return response()->json(["status" => ResponseAlias::HTTP_UNPROCESSABLE_ENTITY, "message" => $this->getMessage()]);
+        return response()->json(["data"=>[], "message" => $this->getMessage()],ResponseAlias::HTTP_UNPROCESSABLE_ENTITY);
 
     }
 }
