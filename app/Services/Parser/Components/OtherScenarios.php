@@ -1,31 +1,21 @@
 <?php
 
-namespace App\Services;
+namespace App\Services\Parser\Components;
 
-use App\Contracts\RequestProcessorInterface;
 
 /**
  * This could happen when we (for instance) have one number and one boolean data
  */
 class OtherScenarios implements RequestProcessorInterface
 {
-    private mixed $request;
-
-    /**
-     * @param $request
-     */
-    public function __construct($request)
-    {
-        $this->request = $request;
-    }
 
     /**
      * @param $request
      * @return mixed
      */
-    public function isApplicable($request) : mixed
+    public function isApplicable($request) : bool
     {
-        return  $this->request;
+//        return  $this->request;
     }
 
     /**

@@ -26,6 +26,7 @@ class RequestProcessorProvider extends ServiceProvider
     public function register(): void
     {
         $this->app->bind(RequestProcessorInterface::class, function ($app) {
+//request in app
 
             $request = $app->make(Request::class);
             $validator = $app->make(InputProcessorRequest::class);

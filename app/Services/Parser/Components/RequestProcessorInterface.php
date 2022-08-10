@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Contracts;
+namespace App\Services\Parser\Components;
 
 interface RequestProcessorInterface
 {
 
-    public function isApplicable($request): mixed;
+    public function isApplicable($request): bool;
 
     public function getResult($request) : mixed;
 }
