@@ -31,7 +31,7 @@ class OtherScenarios implements RequestProcessorInterface
     /**
      * @param $request
      */
-    public function getResult($request)
+    public function getResult($request): mixed
     {
         // TODO: Implement getResult() method.
     }

@@ -20,9 +20,9 @@ class StringConcatenation implements RequestProcessorInterface
 
     /**
      * @param $request
-     * @return string|void
+     * @return mixed
      */
-    public function isApplicable($request)
+    public function isApplicable($request): mixed
     {
 
         if (array_filter($this->request, function ($element) {

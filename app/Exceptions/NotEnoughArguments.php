@@ -4,6 +4,7 @@ namespace App\Exceptions;
 
 use Exception;
 use Illuminate\Http\JsonResponse;
+use Symfony\Component\HttpFoundation\Response as ResponseAlias;
 
 class NotEnoughArguments extends Exception
 {
@@ -12,7 +13,7 @@ class NotEnoughArguments extends Exception
      */
     public function render(): JsonResponse
     {
-        return response()->json(["status" => 422, "message" => $this->getMessage()]);
+        return response()->json(["status" => ResponseAlias::HTTP_UNPROCESSABLE_ENTITY, "message" => $this->getMessage()]);
 
     }
 }

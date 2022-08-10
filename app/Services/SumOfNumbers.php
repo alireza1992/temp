@@ -27,11 +27,11 @@ class SumOfNumbers implements RequestProcessorInterface
 
     /**
      * @param $request
-     * @return int
+     * @return float
      */
-    public function getResult($request): int
+    public function getResult($request): float
     {
 
-        return ((int)$request[0] + (int)$request[1]);
+        return ($request[0] + $request[1]);
     }
 }

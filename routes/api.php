@@ -17,4 +17,5 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+//todo route service provider
 Route::post('/v1/json-output','V1\RequestProcessorController@requestProcessor');

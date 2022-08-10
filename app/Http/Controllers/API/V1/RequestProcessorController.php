@@ -13,6 +13,7 @@ class RequestProcessorController extends Controller
      */
     public function requestProcessor(RequestProcessorInterface $requestProcessor) : mixed
     {
-        return $requestProcessor->isApplicable($requestProcessor);
+
+        return response()->json([$requestProcessor->isApplicable($requestProcessor)]);
     }
 }
